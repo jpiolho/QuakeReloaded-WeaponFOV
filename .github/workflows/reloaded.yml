@@ -22,7 +22,7 @@ env:
   PUBLISH_PATH: ./Publish
   
   CSPROJ_PATH: WeaponFOV/WeaponFOV.csproj
-  RELOADEDII_PACKAGENAME: QuakeReloaded-WeaponFOV
+  RELOADEDII_PACKAGENAME: WeaponFOV
   
   RELOADEDIIMODS: .
   
