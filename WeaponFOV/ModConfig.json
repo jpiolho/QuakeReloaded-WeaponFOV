@@ -1,0 +1,21 @@
+{
+  "ModId": "quakeenhanced.mod.weaponfov",
+  "ModName": "WeaponFOV",
+  "ModAuthor": "JPiolho",
+  "ModVersion": "1.0.0",
+  "ModDescription": "Adds options to control the weapon field of view",
+  "ModDll": "WeaponFOV.dll",
+  "ModIcon": "Preview.png",
+  "ModR2RManagedDll32": "x86/WeaponFOV.dll",
+  "ModR2RManagedDll64": "x64/WeaponFOV.dll",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "",
+  "IsLibrary": false,
+  "ReleaseMetadataFileName": "WeaponFOV.ReleaseMetadata.json",
+  "PluginData": {},
+  "IsUniversalMod": false,
+  "ModDependencies": [ "reloaded.sharedlib.hooks", "quakeenhanced.mod.quakereloaded", "Reloaded.Memory.SigScan.ReloadedII" ],
+  "OptionalDependencies": [],
+  "SupportedAppId": [ "quake_x64_steam.exe" ],
+  "ProjectUrl": ""
+}
