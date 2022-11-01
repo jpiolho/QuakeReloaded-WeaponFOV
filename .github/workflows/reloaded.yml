@@ -83,6 +83,7 @@ jobs:
         run: dotnet build
       
       - name: Build mod
+        working-directory: ./WeaponFOV
         run: |
           ./Publish.ps1 `
             -ChangelogPath "$env:PUBLISH_CHANGELOG_PATH" `
