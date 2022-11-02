@@ -21,7 +21,7 @@ env:
   PUBLISH_CHANGELOG_PATH: ./Publish/Changelog.md
   PUBLISH_PATH: ./Publish
   
-  CSPROJ_PATH: ./WeaponFOV/WeaponFOV.csproj
+  CSPROJ_PATH: ./WeaponFOV.csproj
   RELOADEDII_PACKAGENAME: WeaponFOV
   
   RELOADEDIIMODS: .
@@ -43,7 +43,6 @@ jobs:
         with:
           fetch-depth: 0
           submodules: 'recursive'
-          path: ./WeaponFOV
       
       # Install .NET
       - name: Setup .NET
