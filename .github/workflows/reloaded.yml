@@ -21,7 +21,7 @@ env:
   PUBLISH_CHANGELOG_PATH: ./Publish/Changelog.md
   PUBLISH_PATH: ./Publish
   
-  CSPROJ_PATH: ./WeaponFOV.csproj
+  CSPROJ_PATH: ./WeaponFOV/WeaponFOV.csproj
   RELOADEDII_PACKAGENAME: WeaponFOV
   
   RELOADEDIIMODS: .
