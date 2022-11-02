@@ -45,14 +45,6 @@ jobs:
           submodules: 'recursive'
           path: ./WeaponFOV
       
-      # Fetch quake reloaded for interfaces
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          submodules: 'recursive'
-          repository: jpiolho/QuakeReloaded
-          path: ./QuakeReloaded
-      
       # Install .NET
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
@@ -78,10 +70,6 @@ jobs:
               auto-changelog --sort-commits date --hide-credit --template compact --commit-limit false --unreleased --output "$env:PUBLISH_CHANGELOG_PATH"
           }
           
-      - name: Build interfaces
-        working-directory: ./QuakeReloaded/QuakeReloaded.Interfaces
-        run: dotnet build
-      
       - name: Build mod
         working-directory: ./WeaponFOV
         run: |
