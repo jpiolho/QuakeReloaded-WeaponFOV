@@ -73,13 +73,13 @@ namespace WeaponFOV
             if (!_modLoader.GetController<IQuakeReloaded>().TryGetTarget(out var qreloaded))
                 throw new Exception("Could not get QuakeReloaded API. Are you sure QuakeReloaded is loaded before this mod?");
 
-            qreloaded.Events._EXPERIMENTAL_RegisterOnInitialized(() =>
+            qreloaded.Events.RegisterOnInitialized(() =>
             {
                 qreloaded.Cvars.Register("r_weaponfov", _configuration.DefaultWeaponFOV.ToString(CultureInfo.InvariantCulture), "", CvarFlags.Float, 0f, 180f);
                 qreloaded.Console.PrintLine("WeaponFOV initialized", 0, 255, 0);
             });
 
-            qreloaded.Events._EXPERIMENTAL_RegisterOnRenderFrame(() =>
+            qreloaded.Events.RegisterOnRenderFrame(() =>
             {
                 unsafe
                 {
