@@ -44,6 +44,11 @@ jobs:
         with:
           fetch-depth: 0
           submodules: 'recursive'
+          lfs: true
+      
+      # Checkout LFS objects
+      - name: Checkout LFS objects
+        run: git lfs checkout
       
       # Install .NET
       - name: Setup .NET
