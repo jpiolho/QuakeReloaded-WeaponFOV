@@ -68,7 +68,14 @@ jobs:
           else {
               auto-changelog --sort-commits date --hide-credit --template compact --commit-limit false --unreleased --output "$env:PUBLISH_CHANGELOG_PATH"
           }
-          
+    
+      - name: "Set mod version in ModConfig.json"
+        working-directory: ${{ env.CSPROJ_PATH }}
+        run: |
+            $json = ConvertFrom-Json (Get-Content .\ModConfig.json | Out-String)
+            $json.ModVersion = "$env:RELEASE_TAG"
+            ConvertTo-Json $json -Compress | Out-File .\ModConfig.json
+            
       - name: Build mod
         run: |
           ./Publish.ps1 `
