@@ -22,6 +22,7 @@ env:
   PUBLISH_PATH: ./Publish
   
   CSPROJ_PATH: ./WeaponFOV/WeaponFOV.csproj
+  MODCONFIG_PATH: ./WeaponFOV/ModConfig.json
   RELOADEDII_PACKAGENAME: WeaponFOV
   
   RELOADEDIIMODS: .
@@ -71,9 +72,9 @@ jobs:
     
       - name: "Set mod version in ModConfig.json"
         run: |
-            $json = ConvertFrom-Json (Get-Content "$env:CSPROJ_PATH/ModConfig.json" | Out-String)
+            $json = ConvertFrom-Json (Get-Content "$env:MODCONFIG_PATH" | Out-String)
             $json.ModVersion = "$env:RELEASE_TAG"
-            ConvertTo-Json $json -Compress | Out-File "$env:CSPROJ_PATH/ModConfig.json"
+            ConvertTo-Json $json -Compress | Out-File "$env:MODCONFIG_PATH"
             
       - name: Build mod
         run: |
