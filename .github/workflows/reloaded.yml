@@ -70,11 +70,10 @@ jobs:
           }
     
       - name: "Set mod version in ModConfig.json"
-        working-directory: ${{ env.CSPROJ_PATH }}
         run: |
-            $json = ConvertFrom-Json (Get-Content .\ModConfig.json | Out-String)
+            $json = ConvertFrom-Json (Get-Content "$env:CSPROJ_PATH/ModConfig.json" | Out-String)
             $json.ModVersion = "$env:RELEASE_TAG"
-            ConvertTo-Json $json -Compress | Out-File .\ModConfig.json
+            ConvertTo-Json $json -Compress | Out-File "$env:CSPROJ_PATH/ModConfig.json"
             
       - name: Build mod
         run: |
