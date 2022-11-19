@@ -11,5 +11,4 @@ If you like the look of the long weapons, then this mod is for you!
 
 # How to install
 1. Download and install [Reloaded-II](https://github.com/Reloaded-Project/Reloaded-II) if you don't have it
-2. Install [QuakeReloaded](https://github.com/jpiolho/QuakeReloaded) mod if you don't have it
-3. Download the latest version of WeaponFOV at the [releases](https://github.com/jpiolho/QuakeReloaded-WeaponFOV/releases) page
+2. [**Click here**](https://jpiolho.github.io/QuakeReloaded/installmod.html?username=jpiolho&repo=QuakeReloaded-WeaponFOV&file=WeaponFOV{tag}.7z&latestVersion=1) to install the mod
